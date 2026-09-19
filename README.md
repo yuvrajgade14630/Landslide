@@ -477,7 +477,7 @@ The project demonstrates how **AI, environmental sensing, geospatial information
 
 | Member | Role        |
 | ------ | ----------- |
-| Yuvraj | Team Member |
+| Yuvraj | Team Leader |
 | Simran | Team Member |
 | Shubh  | Team Member |
 | Aryan  | Team Member |
