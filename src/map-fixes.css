@@ -1,0 +1,112 @@
+.gauge > div:last-child {
+  z-index: 3;
+}
+.needle {
+  z-index: 1;
+  height: 44px;
+}
+.gauge strong {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 5px;
+}
+.gauge strong small {
+  white-space: nowrap;
+}
+.profile span {
+  min-width: max-content;
+}
+.profile small {
+  position: static;
+  white-space: nowrap;
+}
+.icon-button {
+  flex: none;
+}
+
+.map-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+}
+.map {
+  flex: 1;
+  min-height: 500px;
+  height: auto;
+  background:
+    linear-gradient(rgba(4, 15, 24, 0.2), rgba(4, 15, 24, 0.48)),
+    radial-gradient(ellipse at 26% 72%, #53724c 0 8%, transparent 30%),
+    radial-gradient(ellipse at 75% 28%, #687d5d 0 6%, transparent 25%),
+    linear-gradient(140deg, #233e3d 0%, #5e7050 35%, #314c42 62%, #172f37 100%);
+}
+.map::before {
+  background:
+    repeating-radial-gradient(
+      ellipse at 27% 68%,
+      transparent 0 17px,
+      #d2c99924 18px 20px,
+      transparent 21px 29px
+    ),
+    repeating-radial-gradient(
+      ellipse at 78% 28%,
+      transparent 0 21px,
+      #d2c9991b 22px 24px,
+      transparent 25px 34px
+    );
+  transform: none;
+}
+.risk-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+.risk-zone {
+  cursor: pointer;
+  stroke-width: 4;
+  transition:
+    opacity 0.2s,
+    filter 0.2s;
+}
+.risk-zone:hover {
+  opacity: 0.9;
+  filter: brightness(1.25);
+}
+.critical-zone {
+  fill: #ff4b4b8c;
+  stroke: #ff6969;
+  filter: drop-shadow(0 0 10px #ff4b4baa);
+}
+.high-zone {
+  fill: #ff9f1c70;
+  stroke: #ffb04c;
+}
+.medium-zone {
+  fill: #f5c54266;
+  stroke: #f7d96f;
+}
+.low-zone {
+  fill: #46c36f55;
+  stroke: #67d88a;
+}
+@media (max-width: 1000px) {
+  .profile small {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .header-actions > span:nth-child(2) {
+    display: none;
+  }
+}
+@media (max-width: 650px) {
+  .map {
+    min-height: 340px;
+  }
+  .profile span {
+    display: none;
+  }
+}

@@ -1,0 +1,17 @@
+/* Keep table/modal risk badges independent from similarly named map zones. */
+.zones .critical,
+.zones .high,
+.zones .medium,
+.zone-modal .critical,
+.zone-modal .high,
+.zone-modal .medium {
+  position: static;
+  width: auto;
+  height: auto;
+  left: auto;
+  top: auto;
+  display: inline-block;
+  transform: none;
+  filter: none;
+  border-width: 0;
+}
